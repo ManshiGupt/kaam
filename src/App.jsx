@@ -176,6 +176,7 @@ import InfiniteScroll from './component/InfiniteScroll';
 import Accordian from './component/accordian/Accordian';
 import ImageSlider from './component/ImageSlider';
 import NestedComment from './component/NestedComment/NestedComment';
+import Section2 from './component/Section2';
 
 const App = () => {
  
@@ -197,11 +198,12 @@ const App = () => {
       </div> */}
       <h1 className='p-40'>hfgydrtytdwr</h1>
       {/* <FormTab/> */}
-      {/* <InfiniteScroll/> */}
+      <InfiniteScroll/>
+      {/* <Section2/> */}
 
       {/* <Accordian/> */}
       {/* <ImageSlider/> */}
-      <NestedComment/>
+      {/* <NestedComment/> */}
     </div>
     </FormContextProvider>
    

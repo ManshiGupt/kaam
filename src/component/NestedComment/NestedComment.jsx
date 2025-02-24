@@ -74,9 +74,9 @@ const a=[
 const NestedComment = () => {
   return (
     <div>
-        {a.map((data)=>(
-            <NestedReply data={data}/>
-        ))}
+        {/* {a.map((data)=>( */}
+            <NestedReply data={a}/>
+        {/* ))} */}
     </div>
   )
 }

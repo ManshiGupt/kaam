@@ -3,7 +3,7 @@ import AccordinCard from "./AccordinCard";
 
 const Accordian = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const[selectedIndex,setSelectedIndex]= useState(0);
+  const[selectedIndex,setSelectedIndex]= useState(null);
   const accoData = [
     {
       title: "dhndj1",
@@ -28,7 +28,7 @@ const Accordian = () => {
             subTitle={data.subTitle}
             isOpen={i===selectedIndex }
             setIsOpen={()=>{
-                setSelectedIndex(i);
+                i===selectedIndex? setSelectedIndex(null):setSelectedIndex(i);
             }}
             
           />
