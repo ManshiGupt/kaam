@@ -172,11 +172,13 @@ import Table from './component/Table';
 import SwiggyApi from './component/SwiggyApi';
 import FormTab from './component/FormTab';
 import { FormContext, FormContextProvider } from './context/FormDataContext';
-import InfiniteScroll from './component/InfiniteScroll';
+
 import Accordian from './component/accordian/Accordian';
 import ImageSlider from './component/ImageSlider';
 import NestedComment from './component/NestedComment/NestedComment';
 import Section2 from './component/Section2';
+import InfiniteScroll from './component/InfinteScrolll/InfiniteScroll';
+import Pagination from './component/pagination/Pagination';
 
 const App = () => {
  
@@ -198,8 +200,10 @@ const App = () => {
       </div> */}
       <h1 className='p-40'>hfgydrtytdwr</h1>
       {/* <FormTab/> */}
-      <InfiniteScroll/>
+     
+      {/* <InfiniteScroll/> */}
       {/* <Section2/> */}
+      <Pagination/>
 
       {/* <Accordian/> */}
       {/* <ImageSlider/> */}
