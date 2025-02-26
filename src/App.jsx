@@ -179,6 +179,8 @@ import NestedComment from './component/NestedComment/NestedComment';
 import Section2 from './component/Section2';
 import InfiniteScroll from './component/InfinteScrolll/InfiniteScroll';
 import Pagination from './component/pagination/Pagination';
+import Slide from './component/slideShow/Slide';
+import Word from './component/wordOmmiter/Word';
 
 const App = () => {
  
@@ -203,7 +205,9 @@ const App = () => {
      
       {/* <InfiniteScroll/> */}
       {/* <Section2/> */}
-      <Pagination/>
+      {/* <Pagination/> */}
+      {/* <Slide/> */}
+      <Word/>
 
       {/* <Accordian/> */}
       {/* <ImageSlider/> */}
