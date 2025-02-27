@@ -181,10 +181,15 @@ import InfiniteScroll from './component/InfinteScrolll/InfiniteScroll';
 import Pagination from './component/pagination/Pagination';
 import Slide from './component/slideShow/Slide';
 import Word from './component/wordOmmiter/Word';
+import ProgressAnimated from './component/progressBarAnimated/ProgressAnimated';
+
+import { Provider } from 'react-redux'
+import { store } from './store/globalStore';
 
 const App = () => {
  
   return (
+    <Provider store={store}>
    
    <FormContextProvider>
     <div>
@@ -207,13 +212,15 @@ const App = () => {
       {/* <Section2/> */}
       {/* <Pagination/> */}
       {/* <Slide/> */}
-      <Word/>
+      {/* <Word/> */}
+      <ProgressAnimated/>
 
       {/* <Accordian/> */}
       {/* <ImageSlider/> */}
       {/* <NestedComment/> */}
     </div>
     </FormContextProvider>
+    </Provider>
    
   );
 };
