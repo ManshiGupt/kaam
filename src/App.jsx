@@ -182,14 +182,19 @@ import Pagination from './component/pagination/Pagination';
 import Slide from './component/slideShow/Slide';
 import Word from './component/wordOmmiter/Word';
 import ProgressAnimated from './component/progressBarAnimated/ProgressAnimated';
+import InputToDo from './component/InputToDo';
+import Omitter from './component/Omitter';
+import State from './component/stateManagement/state';
+import ContactForm from './component/contactFoem/ContactForm';
+import PatientRecord from './patient/PatientRecord';
 
-import { Provider } from 'react-redux'
-import { store } from './store/globalStore';
+// import { Provider } from 'react-redux'
+// import { store } from './store/globalStore';
 
 const App = () => {
  
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
    
    <FormContextProvider>
     <div>
@@ -213,14 +218,19 @@ const App = () => {
       {/* <Pagination/> */}
       {/* <Slide/> */}
       {/* <Word/> */}
-      <ProgressAnimated/>
+      {/* <ProgressAnimated/> */}
 
       {/* <Accordian/> */}
       {/* <ImageSlider/> */}
       {/* <NestedComment/> */}
+      {/* <InputToDo/> */}
+      {/* <Omitter/> */}
+      {/* <State/> */}
+      <ContactForm/>
+      <PatientRecord/>
     </div>
     </FormContextProvider>
-    </Provider>
+    // </Provider>
    
   );
 };
