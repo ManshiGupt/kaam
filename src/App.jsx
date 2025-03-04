@@ -187,6 +187,7 @@ import Omitter from './component/Omitter';
 import State from './component/stateManagement/state';
 import ContactForm from './component/contactFoem/ContactForm';
 import PatientRecord from './patient/PatientRecord';
+import Filter from './component/Filter';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -226,8 +227,9 @@ const App = () => {
       {/* <InputToDo/> */}
       {/* <Omitter/> */}
       {/* <State/> */}
-      <ContactForm/>
+      {/* <ContactForm/> */}
       <PatientRecord/>
+      <Filter/>
     </div>
     </FormContextProvider>
     // </Provider>
