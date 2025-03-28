@@ -188,6 +188,8 @@ import State from './component/stateManagement/state';
 import ContactForm from './component/contactFoem/ContactForm';
 import PatientRecord from './patient/PatientRecord';
 import Filter from './component/Filter';
+import UseRefBox from './component/UseRefBox';
+import ButtonDelete from './component/ButtonDelete';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -228,8 +230,10 @@ const App = () => {
       {/* <Omitter/> */}
       {/* <State/> */}
       {/* <ContactForm/> */}
-      <PatientRecord/>
-      <Filter/>
+      {/* <PatientRecord/>
+      <Filter/> */}
+      {/* <UseRefBox/> */}
+      <ButtonDelete/>
     </div>
     </FormContextProvider>
     // </Provider>
