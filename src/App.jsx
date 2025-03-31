@@ -226,7 +226,7 @@ const App = () => {
       {/* <InputToDo/> */}
       {/* <Omitter/> */}
       {/* <State/> */}
-      <ContactForm/>
+      {/* <ContactForm/> */}
       <PatientRecord/>
     </div>
     </FormContextProvider>
