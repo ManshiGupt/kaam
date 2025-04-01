@@ -191,6 +191,8 @@ import Filter from './component/Filter';
 import UseRefBox from './component/UseRefBox';
 import ButtonDelete from './component/ButtonDelete';
 import OtpBar from './component/otp/OtpBar';
+import Body from './component/swiggy/Body';
+import Otp from './component/Otp';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -235,7 +237,8 @@ const App = () => {
       <Filter/> */}
       {/* <UseRefBox/> */}
       {/* <ButtonDelete/> */}
-      <OtpBar/>
+      {/* <Body/> */}
+      <Otp/>
     </div>
     </FormContextProvider>
     // </Provider>
