@@ -187,6 +187,10 @@ import Omitter from './component/Omitter';
 import State from './component/stateManagement/state';
 import ContactForm from './component/contactFoem/ContactForm';
 import PatientRecord from './patient/PatientRecord';
+import Filter from './component/Filter';
+import UseRefBox from './component/UseRefBox';
+import ButtonDelete from './component/ButtonDelete';
+import OtpBar from './component/otp/OtpBar';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -227,7 +231,11 @@ const App = () => {
       {/* <Omitter/> */}
       {/* <State/> */}
       {/* <ContactForm/> */}
-      <PatientRecord/>
+      {/* <PatientRecord/>
+      <Filter/> */}
+      {/* <UseRefBox/> */}
+      {/* <ButtonDelete/> */}
+      <OtpBar/>
     </div>
     </FormContextProvider>
     // </Provider>
