@@ -193,6 +193,7 @@ import ButtonDelete from './component/ButtonDelete';
 import OtpBar from './component/otp/OtpBar';
 import Body from './component/swiggy/Body';
 import Otp from './component/Otp';
+import Table1 from './component/Table1';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -238,7 +239,8 @@ const App = () => {
       {/* <UseRefBox/> */}
       {/* <ButtonDelete/> */}
       {/* <Body/> */}
-      <Otp/>
+      {/* <Otp/> */}
+      <Table1/>
     </div>
     </FormContextProvider>
     // </Provider>
