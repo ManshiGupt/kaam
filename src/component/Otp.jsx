@@ -8,7 +8,7 @@ const Otp = () => {
    
     const optDigitCount= 5
     const[input,setInput]= useState([...Array(optDigitCount)]);
-    const refu= useRef()
+    const refu= useRef([])
 
     const handlesome=(valuee,i)=>{
        if(!isNaN(valuee)){
@@ -33,7 +33,7 @@ const Otp = () => {
           {input.map((data,i)=>(
             <div>
                 <input key={i} placeholder='_' 
-                ref={refu}
+                ref={(refu)=>refu}
                      type='text'
                     value={input[i]} 
                     onChange={(e)=>handlesome(e.target.value,i)} className='border-2 border-black focus:bg-slate-300' onFocus={()=>setIncreseIndex(prev=>prev+1)}/>

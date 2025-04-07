@@ -193,6 +193,9 @@ import ButtonDelete from './component/ButtonDelete';
 import OtpBar from './component/otp/OtpBar';
 import Body from './component/swiggy/Body';
 import Otp from './component/Otp';
+import Table1 from './component/Table1';
+import SideDrawer from './component/SideDrawer';
+import Otp2 from './component/otp/Otp2';
 import Otp1 from './component/otp/Otp1';
 
 // import { Provider } from 'react-redux'
@@ -239,6 +242,10 @@ const App = () => {
       {/* <UseRefBox/> */}
       {/* <ButtonDelete/> */}
       {/* <Body/> */}
+      {/* <Otp/> */}
+      {/* <Table1/> */}
+      {/* <SideDrawer/> */}
+      <Otp2/>
       {/* <Otp/>
       <OtpBar/> */}
       <Otp1/>
