@@ -199,6 +199,7 @@ import Otp2 from './component/otp/Otp2';
 import Otp1 from './component/otp/Otp1';
 import Search2 from './component/Search2';
 import Accordian1 from './component/Accordian1';
+import FlipkartSearchBold from './component/FlipkartSearchBold';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -251,8 +252,9 @@ const App = () => {
       {/* <Otp/>
       <OtpBar/> */}
       {/* <Otp1/> */}
-      {/* <Search2/> */}
-      <Accordian1/>
+      <Search2/>
+      {/* <FlipkartSearchBold/> */}
+      {/* <Accordian1/> */}
     </div>
     </FormContextProvider>
     // </Provider>

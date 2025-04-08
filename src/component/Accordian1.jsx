@@ -3,7 +3,7 @@ import Accordian2 from "./Accordian2";
 
 const Accordian1 = () => {
   const [open, setOpen] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(null);
   const k = ["manshi0", "anushka1", "ram2", "manshiiii3"];
   const l = ["gupta", "singh", "tomar", "rai"];
   const handleClick = (i) => {
@@ -23,7 +23,7 @@ const Accordian1 = () => {
               *
             </button>
           </div>
-          {open && <Accordian2 l={l} index={index} />}
+          {i==index && <Accordian2 l={l} i={i} />}
         </div>
       ))}
     </div>

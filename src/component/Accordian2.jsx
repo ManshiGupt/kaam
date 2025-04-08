@@ -2,26 +2,26 @@ import { useEffect } from "react"
 
 
 
-const Accordian2 = (l,index) => {
+const Accordian2 = ({l,i}) => {
 
-     const k=["gupta","singh","tomar","rai"];
-    // const index= 2;
-     const filterList= k.filter((e,i)=>i===index)
-    // useEffect(()=>{
-    //     console.log("l",l);
-    //     console.log("index",index);
-    //     console.log("l[index]",l[2])
-    // },[])
+     const p=["gupta","singh","tomar","rai"];
+    // const i= 2;
+     const filterList= l.filter((e,inde)=>inde===i)
+    useEffect(()=>{
+        console.log("l",l);
+        console.log("i",i);
+        console.log("l[i]",filterList)
+    },[])
     
   return (
     <div>
-       <h1>cjhcj</h1>
-       {/* {filterList.map((data,i)=>(
+       
+       {filterList.map((data,i)=>(
         <div>
             {data}
             </div>
-       ))} */}
-       <h2>{filterList}</h2>
+       ))}
+       {/* <h2>{filterList}</h2> */}
 
        
     </div>
