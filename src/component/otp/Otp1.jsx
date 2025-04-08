@@ -18,7 +18,7 @@ const Otp1 = () => {
         newArray(newEvent())
         setItems(event)
         ref.current.focus();
-    }
+    } 
 
   return (
     <div className='flex gap-2 justify-center'>

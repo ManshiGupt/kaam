@@ -197,6 +197,8 @@ import Table1 from './component/Table1';
 import SideDrawer from './component/SideDrawer';
 import Otp2 from './component/otp/Otp2';
 import Otp1 from './component/otp/Otp1';
+import Search2 from './component/Search2';
+import Accordian1 from './component/Accordian1';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -245,10 +247,12 @@ const App = () => {
       {/* <Otp/> */}
       {/* <Table1/> */}
       {/* <SideDrawer/> */}
-      <Otp2/>
+      {/* <Otp2/> */}
       {/* <Otp/>
       <OtpBar/> */}
-      <Otp1/>
+      {/* <Otp1/> */}
+      {/* <Search2/> */}
+      <Accordian1/>
     </div>
     </FormContextProvider>
     // </Provider>
