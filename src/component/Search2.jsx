@@ -5,31 +5,29 @@ const Search2 = () => {
   const [query, setQuery] = useState("");
   const [list, setList] = useState([]);
   const [isBold, setBold] = useState(false);
-  const obj=[{}];
+  
   const fetchData = async () => {
     try {
       const resp = await axios.get(
         `https://app.vedicpandit.in/get-all-poojas?searchText=${query}&category=&currentPage=1&limit=0`
       );
 
-      console.log("resp", resp.data.data[0].title);
-      const regu = new RegExp(query, "g");
+      console.log("resp", resp.data.data);
+      // const regu = new RegExp(query, "g");
       setList(resp.data.data);
       //   const l= list.map((data)=>{
       //     data.
       //   })
       //   console.log(l)
 
-      return resp.data.data;
+      // return resp.data.data;
     } catch (error) {
       console.log("not able to fetch", error);
     }
   };
 
   useEffect(() => {
-    if (query === prev) {
-      query.includes();
-    }
+  
     const k = setTimeout(() => {
       fetchData();
     }, 3000);
@@ -44,7 +42,19 @@ const Search2 = () => {
   const setQuhandleery = (event) => {
     setQuery(event);
   };
+  const flipka=(title)=>{
+    
+   
+    const regu= new RegExp(`(${query})`,"gi");
+    // const arryTitle= title.split();
+    console.log("regu",regu);
+  //   console.log("")
+  //   const f= regu.match(arryTitle)
+  //  return arryTitle.map((data)=>(data))
+    
+  }
 
+  
   return (
     <div className=" flex flex-col justify-center">
       <input
@@ -52,12 +62,12 @@ const Search2 = () => {
         className="border-2 border-black bg-gray-300 flex flex-col justify-center"
         onChange={(e) => setQuhandleery(e.target.value)}
       />
-      <ul className="bg-gray-700 h-40  overflow-y-scroll w-96  flex flex-col justify-center">
-        {list.map((data, i) => (
-          <li key={i} className="bg-gray-400 my-2">
-            {data.title}
-          </li>
-        ))}
+      <ul className="h-40  overflow-y-scroll w-96  flex flex-col justify-center">
+      {list.map((data,i)=>(
+        <li key={i}>
+          {flipka(data.title)}
+        </li>
+      ))}
       </ul>
     </div>
   );

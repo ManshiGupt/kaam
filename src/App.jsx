@@ -253,8 +253,8 @@ const App = () => {
       {/* <Otp/>
       <OtpBar/> */}
       {/* <Otp1/> */}
-      {/* <Search2/> */}
-      <TabDataPersi/>
+      <Search2/>
+      {/* <TabDataPersi/> */}
       {/* <FlipkartSearchBold/> */}
       {/* <Accordian1/> */}
     </div>
