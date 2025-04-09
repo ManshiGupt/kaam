@@ -200,6 +200,7 @@ import Otp1 from './component/otp/Otp1';
 import Search2 from './component/Search2';
 import Accordian1 from './component/Accordian1';
 import FlipkartSearchBold from './component/FlipkartSearchBold';
+import TabDataPersi from './component/TabDataPersi';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -252,7 +253,8 @@ const App = () => {
       {/* <Otp/>
       <OtpBar/> */}
       {/* <Otp1/> */}
-      <Search2/>
+      {/* <Search2/> */}
+      <TabDataPersi/>
       {/* <FlipkartSearchBold/> */}
       {/* <Accordian1/> */}
     </div>

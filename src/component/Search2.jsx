@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 const Search2 = () => {
   const [query, setQuery] = useState("");
   const [list, setList] = useState([]);
-  const[isBold,setBold]= useState(false);
+  const [isBold, setBold] = useState(false);
+  const obj=[{}];
   const fetchData = async () => {
     try {
       const resp = await axios.get(
@@ -12,38 +13,37 @@ const Search2 = () => {
       );
 
       console.log("resp", resp.data.data[0].title);
-      const regu= new RegExp(query,"g");
+      const regu = new RegExp(query, "g");
       setList(resp.data.data);
-      const l= list.map((data)=>{
-        data.
-      })
-      console.log(l)
-      
+      //   const l= list.map((data)=>{
+      //     data.
+      //   })
+      //   console.log(l)
 
-      return resp.data.data
+      return resp.data.data;
     } catch (error) {
       console.log("not able to fetch", error);
     }
   };
 
   useEffect(() => {
+    if (query === prev) {
+      query.includes();
+    }
     const k = setTimeout(() => {
       fetchData();
     }, 3000);
 
-    const cache= k;
-    console.log("k",k);
-    console.log("cache",cache);
+    const cache = k;
+    console.log("k", k);
+    console.log("cache", cache);
 
     return () => clearTimeout(k);
   }, [query]);
 
-const setQuhandleery=(event)=>{
-  setQuery(event);
-
-}
-
-
+  const setQuhandleery = (event) => {
+    setQuery(event);
+  };
 
   return (
     <div className=" flex flex-col justify-center">
@@ -54,7 +54,9 @@ const setQuhandleery=(event)=>{
       />
       <ul className="bg-gray-700 h-40  overflow-y-scroll w-96  flex flex-col justify-center">
         {list.map((data, i) => (
-          <li key={i} className="bg-gray-400 my-2">{data.title}</li>
+          <li key={i} className="bg-gray-400 my-2">
+            {data.title}
+          </li>
         ))}
       </ul>
     </div>
