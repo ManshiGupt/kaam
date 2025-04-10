@@ -28,9 +28,9 @@ const Search2 = () => {
 
   useEffect(() => {
   
-    const k = setTimeout(() => {
-      fetchData();
-    }, 3000);
+    const k = setTimeout(
+      fetchData()
+    , 300);
 
     const cache = k;
     console.log("k", k);
@@ -42,15 +42,19 @@ const Search2 = () => {
   const setQuhandleery = (event) => {
     setQuery(event);
   };
-  const flipka=(title)=>{
-    
-   
-    const regu= new RegExp(`(${query})`,"gi");
-    // const arryTitle= title.split();
-    console.log("regu",regu);
-  //   console.log("")
-  //   const f= regu.match(arryTitle)
-  //  return arryTitle.map((data)=>(data))
+  const flipka=(titlee)=>{
+    console.log(typeof(titlee));
+    const title= titlee.split("");
+    console.log("title",title);
+   const regu= new RegExp(`(${query})`,"gi");
+   console.log("regu",regu);
+   const matching= titlee.match(regu);
+   console.log("matchingg",matching);
+   const splitMatching= matching.split()
+
+  { title.map((char)=>
+        char==matching?console.log("yes",char):console.log("not",char,matching)
+   )}
     
   }
 
