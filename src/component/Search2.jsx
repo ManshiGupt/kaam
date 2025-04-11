@@ -1,60 +1,63 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Search2 = () => {
   const [query, setQuery] = useState("");
   const [list, setList] = useState([]);
   const [isBold, setBold] = useState(false);
-  
+  let ref= useRef({});
+ 
   const fetchData = async () => {
     try {
+
+      
       const resp = await axios.get(
         `https://app.vedicpandit.in/get-all-poojas?searchText=${query}&category=&currentPage=1&limit=0`
       );
 
       console.log("resp", resp.data.data);
-      // const regu = new RegExp(query, "g");
-      setList(resp.data.data);
-      //   const l= list.map((data)=>{
-      //     data.
-      //   })
-      //   console.log(l)
-
-      // return resp.data.data;
+      const data=resp.data.data;
+     console.log("ref",ref.current);
+     ref.current[query]=data;
+      console.log("refWIthData",ref.current[query])
+      setList(data);
+      
     } catch (error) {
       console.log("not able to fetch", error);
     }
   };
 
   useEffect(() => {
+    if(query===ref.current[query]){
+     return
+    }
+   
+
+
   
-    const k = setTimeout(
+    const k = setTimeout(()=>
+
       fetchData()
     , 300);
 
-    const cache = k;
-    console.log("k", k);
-    console.log("cache", cache);
-
+   
     return () => clearTimeout(k);
   }, [query]);
 
   const setQuhandleery = (event) => {
     setQuery(event);
   };
-  const flipka=(titlee)=>{
-    console.log(typeof(titlee));
-    const title= titlee.split("");
-    console.log("title",title);
-   const regu= new RegExp(`(${query})`,"gi");
-   console.log("regu",regu);
-   const matching= titlee.match(regu);
-   console.log("matchingg",matching);
-   const splitMatching= matching.split()
-
-  { title.map((char)=>
-        char==matching?console.log("yes",char):console.log("not",char,matching)
-   )}
+  const flipka=(title)=>{
+    const regu= new RegExp(`(${query})`,"gi");
+    const part=  title.split(regu);
+// console.log("regu",regu)
+// console.log("part",part)
+    
+  return part.map((par,i)=>
+   par.toLowerCase()==query.toLowerCase()?<strong className="text-green-800">{par}</strong>:<span>{par}</span>
+ 
+  
+  )
     
   }
 
@@ -68,8 +71,8 @@ const Search2 = () => {
       />
       <ul className="h-40  overflow-y-scroll w-96  flex flex-col justify-center">
       {list.map((data,i)=>(
-        <li key={i}>
-          {flipka(data.title)}
+        <li key={i} className="p-2">
+         { flipka(data.title)}
         </li>
       ))}
       </ul>
