@@ -1,12 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Search2 = () => {
   const [query, setQuery] = useState("");
   const [list, setList] = useState([]);
   const [isBold, setBold] = useState(false);
-  let ref = useRef({});
-
+  
   const fetchData = async () => {
     try {
       const resp = await axios.get(
@@ -14,24 +13,28 @@ const Search2 = () => {
       );
 
       console.log("resp", resp.data.data);
-      const data = resp.data.data;
-      console.log("ref", ref.current);
-      ref.current[query] = data;
-      console.log("refWIthData", ref.current.query);
-      setList(data);
+      // const regu = new RegExp(query, "g");
+      setList(resp.data.data);
+      //   const l= list.map((data)=>{
+      //     data.
+      //   })
+      //   console.log(l)
+
+      // return resp.data.data;
     } catch (error) {
       console.log("not able to fetch", error);
     }
   };
 
   useEffect(() => {
-    // if (query.toLowerCase() === ref.current[query].toLowerCase()) {
-    //   console.log("query",query)
-    //   console.log("refff",ref.current[query])
-    //   return;
-    // }
+  
+    const k = setTimeout(
+      fetchData()
+    , 300);
 
-    const k = setTimeout(() => fetchData(), 300);
+    const cache = k;
+    console.log("k", k);
+    console.log("cache", cache);
 
     return () => clearTimeout(k);
   }, [query]);
@@ -39,21 +42,14 @@ const Search2 = () => {
   const setQuhandleery = (event) => {
     setQuery(event);
   };
-  const flipka = (title) => {
-    const regu = new RegExp(`(${query})`, "gi");
-    const part = title.split(regu);
-    // console.log("regu",regu)
-    // console.log("part",part)
+  const flipka=(title)=>{
+   
+    const a= new RegExp(`(${query})`,"gi");
+    const part= title.split(a);
+    return part.map((d)=>d.toLowerCase()==query.toLowerCase()?<strong>{d}</strong>:<span>{d}</span>)
+  }
 
-    return part.map((par, i) =>
-      par.toLowerCase() == query.toLowerCase() ? (
-        <strong className="text-green-800">{par}</strong>
-      ) : (
-        <span>{par}</span>
-      )
-    );
-  };
-
+  
   return (
     <div className=" flex flex-col justify-center">
       <input
@@ -62,11 +58,11 @@ const Search2 = () => {
         onChange={(e) => setQuhandleery(e.target.value)}
       />
       <ul className="h-40  overflow-y-scroll w-96  flex flex-col justify-center">
-        {list.map((data, i) => (
-          <li key={i} className="p-2">
-            {flipka(data.title)}
-          </li>
-        ))}
+      {list.map((data,i)=>(
+        <li key={i}>
+          {flipka(data.title)}
+        </li>
+      ))}
       </ul>
     </div>
   );

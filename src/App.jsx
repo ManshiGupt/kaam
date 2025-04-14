@@ -201,6 +201,8 @@ import Search2 from './component/Search2';
 import Accordian1 from './component/Accordian1';
 import FlipkartSearchBold from './component/FlipkartSearchBold';
 import TabDataPersi from './component/TabDataPersi';
+import Omitter1 from './component/Omitter1';
+import FormPatient1 from './component/FormPatient1';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -253,10 +255,12 @@ const App = () => {
       {/* <Otp/>
       <OtpBar/> */}
       {/* <Otp1/> */}
-      <Search2/>
+      {/* <Search2/> */}
       {/* <TabDataPersi/> */}
       {/* <FlipkartSearchBold/> */}
       {/* <Accordian1/> */}
+      {/* <Omitter1/> */}
+      <FormPatient1/>
     </div>
     </FormContextProvider>
     // </Provider>
