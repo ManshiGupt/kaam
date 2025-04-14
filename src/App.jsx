@@ -203,6 +203,7 @@ import FlipkartSearchBold from './component/FlipkartSearchBold';
 import TabDataPersi from './component/TabDataPersi';
 import Omitter1 from './component/Omitter1';
 import FormPatient1 from './component/FormPatient1';
+import Conditional from './component/Conditional';
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -261,6 +262,7 @@ const App = () => {
       {/* <Accordian1/> */}
       {/* <Omitter1/> */}
       <FormPatient1/>
+      <Conditional/>
     </div>
     </FormContextProvider>
     // </Provider>
