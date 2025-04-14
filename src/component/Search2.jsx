@@ -43,10 +43,13 @@ const Search2 = () => {
     setQuery(event);
   };
   const flipka=(title)=>{
+    const k= title.slice(0,query.length);
+    const p= title.slice(query.length);
+    return (<><strong>{k}</strong><span>{p}</span></>)
    
-    const a= new RegExp(`(${query})`,"gi");
-    const part= title.split(a);
-    return part.map((d)=>d.toLowerCase()==query.toLowerCase()?<strong>{d}</strong>:<span>{d}</span>)
+    // const a= new RegExp(`(${query})`,"gi");
+    // const part= title.split(a);
+    // return part.map((d)=>d.toLowerCase()==query.toLowerCase()?<strong>{d}</strong>:<span>{d}</span>)
   }
 
   
