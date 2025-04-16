@@ -262,7 +262,7 @@ const App = () => {
       {/* <Accordian1/> */}
       {/* <Omitter1/> */}
       <FormPatient1/>
-      <Conditional/>
+      {/* <Conditional/> */}
     </div>
     </FormContextProvider>
     // </Provider>
