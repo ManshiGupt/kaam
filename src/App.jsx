@@ -204,6 +204,8 @@ import TabDataPersi from './component/TabDataPersi';
 import Omitter1 from './component/Omitter1';
 import FormPatient1 from './component/FormPatient1';
 import Conditional from './component/Conditional';
+import ToDoList from './component/todoList/toDoList';
+
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -261,8 +263,9 @@ const App = () => {
       {/* <FlipkartSearchBold/> */}
       {/* <Accordian1/> */}
       {/* <Omitter1/> */}
-      <FormPatient1/>
+      {/* <FormPatient1/> */}
       {/* <Conditional/> */}
+     <ToDoList/>
     </div>
     </FormContextProvider>
     // </Provider>
