@@ -206,6 +206,8 @@ import FormPatient1 from './component/FormPatient1';
 import Conditional from './component/Conditional';
 import ToDoList from './component/todoList/toDoList';
 import Corousal from './component/corousal';
+import CorousalMoreImage from './component/CorousalMoreImage';
+import ScrollBar from './component/ScrollBar';
 
 
 // import { Provider } from 'react-redux'
@@ -267,7 +269,9 @@ const App = () => {
       {/* <FormPatient1/> */}
       {/* <Conditional/> */}
      {/* <ToDoList/> */}
-     <Corousal/>
+     {/* <Corousal/> */}
+     <CorousalMoreImage/>
+     <ScrollBar/>
     </div>
     </FormContextProvider>
     // </Provider>

@@ -11,12 +11,13 @@ const Corousal = () => {
     ]
 
     const handlePrev=()=>{
-        setCurrentPage(prev=>prev-1);
+        setCurrentPage(prev=>(prev-1+imagsg.length) %imagsg.length);
     }
 
     const handleNext=()=>{
-        console.log("kdid",imagsg.length)
-        setCurrentPage(prev=>prev>=imagsg.length?imagsg.length-1:prev+1);
+        console.log("kdid",11%10)
+        // setCurrentPage(prev=>prev>=imagsg.length?(prev%10):prev+1);
+        setCurrentPage(prev=>prev%imagsg.length+1);
     }
   return (
     <div>
