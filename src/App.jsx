@@ -205,6 +205,7 @@ import Omitter1 from './component/Omitter1';
 import FormPatient1 from './component/FormPatient1';
 import Conditional from './component/Conditional';
 import ToDoList from './component/todoList/toDoList';
+import Corousal from './component/corousal';
 
 
 // import { Provider } from 'react-redux'
@@ -265,7 +266,8 @@ const App = () => {
       {/* <Omitter1/> */}
       {/* <FormPatient1/> */}
       {/* <Conditional/> */}
-     <ToDoList/>
+     {/* <ToDoList/> */}
+     <Corousal/>
     </div>
     </FormContextProvider>
     // </Provider>
