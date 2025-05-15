@@ -208,6 +208,7 @@ import ToDoList from './component/todoList/toDoList';
 import Corousal from './component/corousal';
 import CorousalMoreImage from './component/CorousalMoreImage';
 import ScrollBar from './component/ScrollBar';
+import ChipInputs from './component/ChipInputs';
 
 
 // import { Provider } from 'react-redux'
@@ -270,8 +271,9 @@ const App = () => {
       {/* <Conditional/> */}
      {/* <ToDoList/> */}
      {/* <Corousal/> */}
-     <CorousalMoreImage/>
-     <ScrollBar/>
+     {/* <CorousalMoreImage/>
+     <ScrollBar/> */}
+     <ChipInputs/>
     </div>
     </FormContextProvider>
     // </Provider>
