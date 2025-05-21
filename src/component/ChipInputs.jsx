@@ -8,12 +8,18 @@ const ChipInputs = () => {
     }
     const handleRemove=(i)=>{
         console.log(  d.filter((k,ind)=>i!=ind));
-       d.filter((k,ind)=>i===ind)
+       
+       setD(d.filter((k,ind)=>i !=ind))
     } 
+    const handlde=()=>{
+      setD(prev=>[...prev,data]);
+      setData("")
+    }
   return (
     <div>ChipInputs
         {data}
         <input className='border-2 border-black p-4 ' value={data} onChange={(e)=>handle(e)}/>
+        <button onClick={()=>handlde()}>this ishd</button>
         <div className='flex gap-4 pt-5 justify-center'>
            {d.map((d,i)=>(
             <div key={i} className='rounded-2xl p-3 border-2 border-black flex gap-5'>

@@ -209,6 +209,8 @@ import Corousal from './component/corousal';
 import CorousalMoreImage from './component/CorousalMoreImage';
 import ScrollBar from './component/ScrollBar';
 import ChipInputs from './component/ChipInputs';
+import LoadSkeleton from './component/LoadSkeleton';
+import BlogPost from './component/akshaySainiInterviewPre/BlogPost';
 
 
 // import { Provider } from 'react-redux'
@@ -273,7 +275,9 @@ const App = () => {
      {/* <Corousal/> */}
      {/* <CorousalMoreImage/>
      <ScrollBar/> */}
-     <ChipInputs/>
+     {/* <ChipInputs/> */}
+     {/* <LoadSkeleton/> */}
+     <BlogPost/>
     </div>
     </FormContextProvider>
     // </Provider>
