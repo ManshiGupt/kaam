@@ -211,6 +211,9 @@ import ScrollBar from './component/ScrollBar';
 import ChipInputs from './component/ChipInputs';
 import LoadSkeleton from './component/LoadSkeleton';
 import BlogPost from './component/akshaySainiInterviewPre/BlogPost';
+import StopWatch from './component/akshaySainiInterviewPre/StopWatch';
+import SortableList from './component/akshaySainiInterviewPre/SortableList';
+import GridLights from './component/akshaySainiInterviewPre/GridLights';
 
 
 // import { Provider } from 'react-redux'
@@ -277,7 +280,10 @@ const App = () => {
      <ScrollBar/> */}
      {/* <ChipInputs/> */}
      {/* <LoadSkeleton/> */}
-     <BlogPost/>
+     {/* <BlogPost/> */}
+     {/* <StopWatch/> */}
+     {/* <SortableList/> */}
+     <GridLights/>
     </div>
     </FormContextProvider>
     // </Provider>
