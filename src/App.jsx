@@ -209,7 +209,11 @@ import Corousal from './component/corousal';
 import CorousalMoreImage from './component/CorousalMoreImage';
 import ScrollBar from './component/ScrollBar';
 import ChipInputs from './component/ChipInputs';
-import StopWatch from './component/StopWatch';
+import LoadSkeleton from './component/LoadSkeleton';
+import BlogPost from './component/akshaySainiInterviewPre/BlogPost';
+import StopWatch from './component/akshaySainiInterviewPre/StopWatch';
+import SortableList from './component/akshaySainiInterviewPre/SortableList';
+import GridLights from './component/akshaySainiInterviewPre/GridLights';
 
 
 // import { Provider } from 'react-redux'
@@ -275,7 +279,11 @@ const App = () => {
      {/* <CorousalMoreImage/>
      <ScrollBar/> */}
      {/* <ChipInputs/> */}
-     <StopWatch/>
+     {/* <LoadSkeleton/> */}
+     {/* <BlogPost/> */}
+     {/* <StopWatch/> */}
+     {/* <SortableList/> */}
+     <GridLights/>
     </div>
     </FormContextProvider>
     // </Provider>
