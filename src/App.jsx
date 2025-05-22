@@ -209,6 +209,7 @@ import Corousal from './component/corousal';
 import CorousalMoreImage from './component/CorousalMoreImage';
 import ScrollBar from './component/ScrollBar';
 import ChipInputs from './component/ChipInputs';
+import StopWatch from './component/StopWatch';
 
 
 // import { Provider } from 'react-redux'
@@ -273,7 +274,8 @@ const App = () => {
      {/* <Corousal/> */}
      {/* <CorousalMoreImage/>
      <ScrollBar/> */}
-     <ChipInputs/>
+     {/* <ChipInputs/> */}
+     <StopWatch/>
     </div>
     </FormContextProvider>
     // </Provider>

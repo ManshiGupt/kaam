@@ -8,7 +8,7 @@ const StateSome = ({a}) => {
         {a.map((d)=>(
         <div className='h-60 w-40 border-4 border-black flex flex-row gap-20'>
             {d}
-            <button>{upvotes}</button>
+            <button on>{upvotes}</button>
             <button>{downvotes}</button>
             </div>
     ))}</div>
