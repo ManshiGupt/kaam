@@ -27,7 +27,9 @@ const TicTacToe = () => {
   return (
     <div>
       TicTacToe
-      <h1>Winner</h1>
+      <h1>Winner
+        
+      </h1>
       {/* <h1>Next Player<span>{turn}</span></h1> */}
       <div>
         <div className="flex">
