@@ -18,7 +18,7 @@ const TicTacToe = () => {
     // }
     setValue(turn.i)
 
-    console.log("i", i);
+    console.log("exi", i);
     console.log("ram", ram);
     console.log("turn", turn);
     console.log("currentIndex",currentIndex)
@@ -28,7 +28,7 @@ const TicTacToe = () => {
     <div>
       TicTacToe
       <h1>Winner
-        
+
       </h1>
       {/* <h1>Next Player<span>{turn}</span></h1> */}
       <div>
