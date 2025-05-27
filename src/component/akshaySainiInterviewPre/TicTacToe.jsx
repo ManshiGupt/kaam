@@ -16,10 +16,12 @@ const TicTacToe = () => {
       <h1>Winner</h1>
       <h1>Next PLayer {player?"X":"O"}</h1>
       <div>
-        <div className=' gap-10 justify-center'>
+        <div className='grid grid-cols-3 gap-0 justify-center'>
           {Array.from({length:9}).map((item,i)=>(
-            <div key={i} className=' hover:bg-red-500 p-4 rounded-xl' onClick={()=>handle(i)}>
-            {turn?(turn[i]?"X":"O"): "M "}
+            <div key={i} className=' hover:bg-red-500 p-4 rounded-sm border-2 bg-gray-400' onClick={()=>handle(i)}>
+              {turn[i]?"X":"O"}
+              {/* {i<2?(turn[i]?"X":"O"): "M "} */}
+              {/* {i>2 && <div>ram</div>} */}
             </div>
           ))}
         </div>
