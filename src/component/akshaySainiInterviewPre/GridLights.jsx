@@ -1,12 +1,13 @@
 import React from 'react'
 
 const GridLights = () => {
-    const[]
+    // const[]
   return (
-    <div>GridLights
+    <div>
+      GridLights
         <div>
             <div>
-
+                
             </div>
         </div>
     </div>

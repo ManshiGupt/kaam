@@ -214,6 +214,7 @@ import BlogPost from './component/akshaySainiInterviewPre/BlogPost';
 import StopWatch from './component/akshaySainiInterviewPre/StopWatch';
 import SortableList from './component/akshaySainiInterviewPre/SortableList';
 import GridLights from './component/akshaySainiInterviewPre/GridLights';
+import FindMax from "./component/akshaySainiInterviewPre/FindMax"
 
 
 // import { Provider } from 'react-redux'
@@ -283,7 +284,8 @@ const App = () => {
      {/* <BlogPost/> */}
      {/* <StopWatch/> */}
      {/* <SortableList/> */}
-     <GridLights/>
+     {/* <GridLights/> */}
+     <FindMax/>
     </div>
     </FormContextProvider>
     // </Provider>
