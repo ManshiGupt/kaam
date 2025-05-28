@@ -215,6 +215,7 @@ import StopWatch from './component/akshaySainiInterviewPre/StopWatch';
 import SortableList from './component/akshaySainiInterviewPre/SortableList';
 import GridLights from './component/akshaySainiInterviewPre/GridLights';
 // import FindMax from "./component/akshaySainiInterviewPre/FindMax"
+import TicTacToe from './component/akshaySainiInterviewPre/TicTacToe';
 
 
 // import { Provider } from 'react-redux'
@@ -283,7 +284,10 @@ const App = () => {
      {/* <LoadSkeleton/> */}
      {/* <BlogPost/> */}
      {/* <StopWatch/> */}
+     {/* <GridLights/> */}
      {/* <SortableList/> */}
+     {/* <GridLights/> */}
+     <TicTacToe/>
      {/* <GridLights/> */}
      {/* <FindMax/> */}
     </div>
