@@ -6,7 +6,7 @@ const UseRefBox = () => {
 
   // Toggle visibility on button click
   const toggleBox = () => {
-    setIsVisible(!isVisible);
+    setIsVisible(!isVisible)
   };
 
   // Hide the box when clicking outside of it
