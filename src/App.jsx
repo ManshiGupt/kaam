@@ -216,6 +216,10 @@ import SortableList from './component/akshaySainiInterviewPre/SortableList';
 import GridLights from './component/akshaySainiInterviewPre/GridLights';
 // import FindMax from "./component/akshaySainiInterviewPre/FindMax"
 import TicTacToe from './component/akshaySainiInterviewPre/TicTacToe';
+import ProgressBar11 from './component/ProgressBar11';
+import StopWtch1 from './component/StopWtch1';
+import InfiniteScroll1 from './component/InfiniteScroll1';
+import ImageSlider1 from './component/ImageSlider1';
 
 
 // import { Provider } from 'react-redux'
@@ -287,9 +291,13 @@ const App = () => {
      {/* <GridLights/> */}
      {/* <SortableList/> */}
      {/* <GridLights/> */}
-     <TicTacToe/>
+     {/* <TicTacToe/> */}
      {/* <GridLights/> */}
      {/* <FindMax/> */}
+     {/* <ProgressBar11/> */}
+     {/* <StopWtch1/> */}
+     <ImageSlider1/>
+     {/* <InfiniteScroll1/> */}
     </div>
     </FormContextProvider>
     // </Provider>
