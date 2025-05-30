@@ -216,6 +216,7 @@ import SortableList from './component/akshaySainiInterviewPre/SortableList';
 import GridLights from './component/akshaySainiInterviewPre/GridLights';
 // import FindMax from "./component/akshaySainiInterviewPre/FindMax"
 import TicTacToe from './component/akshaySainiInterviewPre/TicTacToe';
+import StarRating from './component/revision/StarRating';
 
 
 // import { Provider } from 'react-redux'
@@ -287,9 +288,10 @@ const App = () => {
      {/* <GridLights/> */}
      {/* <SortableList/> */}
      {/* <GridLights/> */}
-     <TicTacToe/>
+     {/* <TicTacToe/> */}
      {/* <GridLights/> */}
      {/* <FindMax/> */}
+     <StarRating/>
     </div>
     </FormContextProvider>
     // </Provider>
