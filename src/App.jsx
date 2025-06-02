@@ -134,7 +134,7 @@
 //   return (
 //     <languageContext.Provider value={language}>
 //       <div>
-//         <input type="checkbox" 
+//         <input type="checkbox"
 //             checked={language==="Hindi"}
 //             onChange={(e)=>setLanguage(e.target.checked? "Hindi":"English")}
 //             />
@@ -142,7 +142,7 @@
 //           <Routes>
 //             <Route>
 //               <Route path="/" element={<Parent />} />
-              
+
 //             </Route>
 //           </Routes>
 //         </BrowserRouter>
@@ -153,87 +153,87 @@
 
 // export default App;
 
-
-{/* <input
+{
+  /* <input
 type="checkbox"
 checked={language === "Hindi"}
 onChange={(e)=>{setLanguage(e.target.checked ? "Hindi" : "English")}}
 />
 App
-<Parent /> */}
+<Parent /> */
+}
 
+import React, { lazy, Suspense, useState } from "react";
+import Navbar1 from "./component/Navbar1";
+import Sideheader from "./component/Sideheader";
+import Header from "./component/Header";
+import Table from "./component/Table";
+import SwiggyApi from "./component/SwiggyApi";
+import FormTab from "./component/FormTab";
+import { FormContext, FormContextProvider } from "./context/FormDataContext";
 
-
-import React, { useState } from 'react';
-import Navbar1 from './component/Navbar1';
-import Sideheader from './component/Sideheader';
-import Header from './component/Header';
-import Table from './component/Table';
-import SwiggyApi from './component/SwiggyApi';
-import FormTab from './component/FormTab';
-import { FormContext, FormContextProvider } from './context/FormDataContext';
-
-import Accordian from './component/accordian/Accordian';
-import ImageSlider from './component/ImageSlider';
-import NestedComment from './component/NestedComment/NestedComment';
-import Section2 from './component/Section2';
-import InfiniteScroll from './component/InfinteScrolll/InfiniteScroll';
-import Pagination from './component/pagination/Pagination';
-import Slide from './component/slideShow/Slide';
-import Word from './component/wordOmmiter/Word';
-import ProgressAnimated from './component/progressBarAnimated/ProgressAnimated';
-import InputToDo from './component/InputToDo';
-import Omitter from './component/Omitter';
-import State from './component/stateManagement/state';
-import ContactForm from './component/contactFoem/ContactForm';
-import PatientRecord from './patient/PatientRecord';
-import Filter from './component/Filter';
-import UseRefBox from './component/UseRefBox';
-import ButtonDelete from './component/ButtonDelete';
-import OtpBar from './component/otp/OtpBar';
-import Body from './component/swiggy/Body';
-import Otp from './component/Otp';
-import Table1 from './component/Table1';
-import SideDrawer from './component/SideDrawer';
-import Otp2 from './component/otp/Otp2';
-import Otp1 from './component/otp/Otp1';
-import Search2 from './component/Search2';
-import Accordian1 from './component/Accordian1';
-import FlipkartSearchBold from './component/FlipkartSearchBold';
-import TabDataPersi from './component/TabDataPersi';
-import Omitter1 from './component/Omitter1';
-import FormPatient1 from './component/FormPatient1';
-import Conditional from './component/Conditional';
-import ToDoList from './component/todoList/toDoList';
-import Corousal from './component/corousal';
-import CorousalMoreImage from './component/CorousalMoreImage';
-import ScrollBar from './component/ScrollBar';
-import ChipInputs from './component/ChipInputs';
-import LoadSkeleton from './component/LoadSkeleton';
-import BlogPost from './component/akshaySainiInterviewPre/BlogPost';
-import StopWatch from './component/akshaySainiInterviewPre/StopWatch';
-import SortableList from './component/akshaySainiInterviewPre/SortableList';
-import GridLights from './component/akshaySainiInterviewPre/GridLights';
+import Accordian from "./component/accordian/Accordian";
+import ImageSlider from "./component/ImageSlider";
+import NestedComment from "./component/NestedComment/NestedComment";
+import Section2 from "./component/Section2";
+import InfiniteScroll from "./component/InfinteScrolll/InfiniteScroll";
+import Pagination from "./component/pagination/Pagination";
+import Slide from "./component/slideShow/Slide";
+import Word from "./component/wordOmmiter/Word";
+import ProgressAnimated from "./component/progressBarAnimated/ProgressAnimated";
+import InputToDo from "./component/InputToDo";
+import Omitter from "./component/Omitter";
+import State from "./component/stateManagement/state";
+import ContactForm from "./component/contactFoem/ContactForm";
+import PatientRecord from "./patient/PatientRecord";
+import Filter from "./component/Filter";
+import UseRefBox from "./component/UseRefBox";
+import ButtonDelete from "./component/ButtonDelete";
+import OtpBar from "./component/otp/OtpBar";
+import Body from "./component/swiggy/Body";
+import Otp from "./component/Otp";
+import Table1 from "./component/Table1";
+import SideDrawer from "./component/SideDrawer";
+import Otp2 from "./component/otp/Otp2";
+import Otp1 from "./component/otp/Otp1";
+import Search2 from "./component/Search2";
+import Accordian1 from "./component/Accordian1";
+import FlipkartSearchBold from "./component/FlipkartSearchBold";
+import TabDataPersi from "./component/TabDataPersi";
+import Omitter1 from "./component/Omitter1";
+import FormPatient1 from "./component/FormPatient1";
+import Conditional from "./component/Conditional";
+import ToDoList from "./component/todoList/toDoList";
+import Corousal from "./component/corousal";
+import CorousalMoreImage from "./component/CorousalMoreImage";
+import ScrollBar from "./component/ScrollBar";
+import ChipInputs from "./component/ChipInputs";
+import LoadSkeleton from "./component/LoadSkeleton";
+import BlogPost from "./component/akshaySainiInterviewPre/BlogPost";
+import StopWatch from "./component/akshaySainiInterviewPre/StopWatch";
+import SortableList from "./component/akshaySainiInterviewPre/SortableList";
+import GridLights from "./component/akshaySainiInterviewPre/GridLights";
 // import FindMax from "./component/akshaySainiInterviewPre/FindMax"
-import TicTacToe from './component/akshaySainiInterviewPre/TicTacToe';
-import ProgressBar11 from './component/ProgressBar11';
-import StopWtch1 from './component/StopWtch1';
-import InfiniteScroll1 from './component/InfiniteScroll1';
-import ImageSlider1 from './component/ImageSlider1';
-import WordOmitter from './component/WordOmitter';
-
+import TicTacToe from "./component/akshaySainiInterviewPre/TicTacToe";
+import ProgressBar11 from "./component/ProgressBar11";
+import StopWtch1 from "./component/StopWtch1";
+import InfiniteScroll1 from "./component/InfiniteScroll1";
+import ImageSlider1 from "./component/ImageSlider1";
+import WordOmitter from "./component/WordOmitter";
+import LayLoading from "./component/LayLoading";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
 
 const App = () => {
- 
+  const LayLoading = lazy(() => import("./component/LayLoading"));
+
   return (
     // <Provider store={store}>
-   
-   <FormContextProvider>
-    <div>
-      {/* <Navbar1/>
+
+    <FormContextProvider>
+      <div>
+        {/* <Navbar1/>
     
       <div className='flex '>
         <div>
@@ -245,65 +245,68 @@ const App = () => {
             <SwiggyApi/>
         </div>
       </div> */}
-      <h1 className='p-40'>hfgydrtytdwr</h1>
-      {/* <FormTab/> */}
-     
-      {/* <InfiniteScroll/> */}
-      {/* <Section2/> */}
-      {/* <Pagination/> */}
-      {/* <Slide/> */}
-      {/* <Word/> */}
-      {/* <ProgressAnimated/> */}
+        <h1 className="p-40">hfgydrtytdwr</h1>
+        {/* <FormTab/> */}
 
-      {/* <Accordian/> */}
-      {/* <ImageSlider/> */}
-      {/* <NestedComment/> */}
-      {/* <InputToDo/> */}
-      {/* <Omitter/> */}
-      {/* <State/> */}
-      {/* <ContactForm/> */}
-      {/* <PatientRecord/>
+        {/* <InfiniteScroll/> */}
+        {/* <Section2/> */}
+        {/* <Pagination/> */}
+        {/* <Slide/> */}
+        {/* <Word/> */}
+        {/* <ProgressAnimated/> */}
+
+        {/* <Accordian/> */}
+        {/* <ImageSlider/> */}
+        {/* <NestedComment/> */}
+        {/* <InputToDo/> */}
+        {/* <Omitter/> */}
+        {/* <State/> */}
+        {/* <ContactForm/> */}
+        {/* <PatientRecord/>
       <Filter/> */}
-      {/* <UseRefBox/> */}
-      {/* <ButtonDelete/> */}
-      {/* <Body/> */}
-      {/* <Otp/> */}
-      {/* <Table1/> */}
-      {/* <SideDrawer/> */}
-      {/* <Otp2/> */}
-      {/* <Otp/>
+        {/* <UseRefBox/> */}
+        {/* <ButtonDelete/> */}
+        {/* <Body/> */}
+        {/* <Otp/> */}
+        {/* <Table1/> */}
+        {/* <SideDrawer/> */}
+        {/* <Otp2/> */}
+        {/* <Otp/>
       <OtpBar/> */}
-      {/* <Otp1/> */}
-      {/* <Search2/> */}
-      {/* <TabDataPersi/> */}
-      {/* <FlipkartSearchBold/> */}
-      {/* <Accordian1/> */}
-      {/* <Omitter1/> */}
-      {/* <FormPatient1/> */}
-      {/* <Conditional/> */}
-     {/* <ToDoList/> */}
-     {/* <Corousal/> */}
-     {/* <CorousalMoreImage/>
+        {/* <Otp1/> */}
+        {/* <Search2/> */}
+        {/* <TabDataPersi/> */}
+        {/* <FlipkartSearchBold/> */}
+        {/* <Accordian1/> */}
+        {/* <Omitter1/> */}
+        {/* <FormPatient1/> */}
+        {/* <Conditional/> */}
+        {/* <ToDoList/> */}
+        {/* <Corousal/> */}
+        {/* <CorousalMoreImage/>
      <ScrollBar/> */}
-     {/* <ChipInputs/> */}
-     {/* <LoadSkeleton/> */}
-     {/* <BlogPost/> */}
-     {/* <StopWatch/> */}
-     {/* <GridLights/> */}
-     {/* <SortableList/> */}
-     {/* <GridLights/> */}
-     {/* <TicTacToe/> */}
-     {/* <GridLights/> */}
-     {/* <FindMax/> */}
-     {/* <ProgressBar11/> */}
-     {/* <StopWtch1/> */}
-     {/* <ImageSlider1/> */}
-     {/* <InfiniteScroll1/> */}
-     <WordOmitter/>
-    </div>
+        {/* <ChipInputs/> */}
+        {/* <LoadSkeleton/> */}
+        {/* <BlogPost/> */}
+        {/* <StopWatch/> */}
+        {/* <GridLights/> */}
+        {/* <SortableList/> */}
+        {/* <GridLights/> */}
+        {/* <TicTacToe/> */}
+        {/* <GridLights/> */}
+        {/* <FindMax/> */}
+        {/* <ProgressBar11/> */}
+        {/* <StopWtch1/> */}
+        {/* <ImageSlider1/> */}
+        {/* <InfiniteScroll1/> */}
+        <WordOmitter />
+        {/* <button onClick={}>hfjhf</button> */}
+        <Suspense fallback={<h1>losding</h1>}>
+          <LayLoading />
+        </Suspense>
+      </div>
     </FormContextProvider>
     // </Provider>
-   
   );
 };
 
