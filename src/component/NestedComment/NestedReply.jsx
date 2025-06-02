@@ -11,7 +11,7 @@ const NestedReply = ({data}) => {
             src="https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png"
             alt="user"
           />
-            <h3>{data.username}</h3>
+            <h3>{data.username}</h3>                  
             <h3 className='py-2'>{data.comment}</h3>     
             {data?.replies && <NestedReply data={data.replies}/>}                    
         </div>

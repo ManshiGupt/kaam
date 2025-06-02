@@ -220,6 +220,7 @@ import ProgressBar11 from './component/ProgressBar11';
 import StopWtch1 from './component/StopWtch1';
 import InfiniteScroll1 from './component/InfiniteScroll1';
 import ImageSlider1 from './component/ImageSlider1';
+import WordOmitter from './component/WordOmitter';
 
 
 // import { Provider } from 'react-redux'
@@ -297,7 +298,8 @@ const App = () => {
      {/* <ProgressBar11/> */}
      {/* <StopWtch1/> */}
      {/* <ImageSlider1/> */}
-     <InfiniteScroll1/>
+     {/* <InfiniteScroll1/> */}
+     <WordOmitter/>
     </div>
     </FormContextProvider>
     // </Provider>
