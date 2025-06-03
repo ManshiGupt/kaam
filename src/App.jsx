@@ -221,6 +221,8 @@ import InfiniteScroll1 from "./component/InfiniteScroll1";
 import ImageSlider1 from "./component/ImageSlider1";
 import WordOmitter from "./component/WordOmitter";
 import LayLoading from "./component/LayLoading";
+import Debouncing from "./component/Debouncing";
+import FilterByid from "./component/FilterByid";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -299,11 +301,13 @@ const App = () => {
         {/* <StopWtch1/> */}
         {/* <ImageSlider1/> */}
         {/* <InfiniteScroll1/> */}
-        <WordOmitter />
+        {/* <WordOmitter /> */}
         {/* <button onClick={}>hfjhf</button> */}
-        <Suspense fallback={<h1>losding</h1>}>
+        {/* <Suspense fallback={<h1>losding</h1>}>
           <LayLoading />
-        </Suspense>
+        </Suspense> */}
+        <Debouncing/>
+        <FilterByid/>
       </div>
     </FormContextProvider>
     // </Provider>
