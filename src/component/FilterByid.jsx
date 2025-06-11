@@ -16,7 +16,8 @@ const FilterByid = () => {
    
     const handleLife=(index)=>{
        const filterdData= [...data]
-       const k=filterdData.filter((item,i)=>item._id !== index) console.log("k",k)
+       const k=filterdData.filter((item,i)=>item._id !== index)
+    //    console.log("k",k)
     //    setData(k)
        setRam(k)
     }
