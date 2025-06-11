@@ -191,7 +191,7 @@ import UseRefBox from "./component/UseRefBox";
 import ButtonDelete from "./component/ButtonDelete";
 import OtpBar from "./component/otp/OtpBar";
 import Body from "./component/swiggy/Body";
-import Otp from "./component/Otp";
+// import Otp from "./component/Otp";
 import Table1 from "./component/Table1";
 import SideDrawer from "./component/SideDrawer";
 import Otp2 from "./component/otp/Otp2";
@@ -222,13 +222,15 @@ import ImageSlider1 from "./component/ImageSlider1";
 import WordOmitter from "./component/WordOmitter";
 import LayLoading from "./component/LayLoading";
 import Debouncing from "./component/Debouncing";
-import FilterByid from "./component/FilterByid";
+// import FilterByid from "./component/FilterByid";
+import Otp from "./component/revision/Otp";
+import SearchBar100 from "./component/revision/SearchBar100";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
 
 const App = () => {
-  const LayLoading = lazy(() => import("./component/LayLoading"));
+  // const LayLoading = lazy(() => import("./component/LayLoading"));
 
   return (
     // <Provider store={store}>
@@ -306,8 +308,10 @@ const App = () => {
         {/* <Suspense fallback={<h1>losding</h1>}>
           <LayLoading />
         </Suspense> */}
-        <Debouncing/>
-        <FilterByid/>
+        {/* <Debouncing/>
+        <FilterByid/> */}
+        {/* <Otp/> */}
+        <SearchBar100/>
       </div>
     </FormContextProvider>
     // </Provider>
