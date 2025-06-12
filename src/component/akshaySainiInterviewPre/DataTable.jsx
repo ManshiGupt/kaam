@@ -19,8 +19,8 @@ const DataTable = () => {
   };
   const hanf = (e) => {
     setLimit(e.target.value);
-    setTotalPage(EKDMTOTAL / limit);
-    setStart(1);
+    setTotalPage(Math.floor(EKDMTOTAL / limit));
+    setStart(0);
   };
   const handPrev = () => {
     setLimit((prev) => prev - 5);
@@ -28,8 +28,8 @@ const DataTable = () => {
     setStart((prev) => prev - 5);
   };
   const handNext = () => {
-    setStart(limit);
-    setLimit((prev) => prev + prev);
+    setStart(limit+1);
+    setLimit((prev) => prev );
     setCurrentPage((prev) => prev + 1);
    
   };
