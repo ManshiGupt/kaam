@@ -20,6 +20,7 @@ const DataTable = () => {
   const hanf=(e)=>{
     setLimit(e.target.value)
     setTotalPage(EKDMTOTAL/limit)
+    setStart(prev=>prev+limit)
   }
   const handPrev=()=>{
     setLimit(prev=>prev-limit)
@@ -32,7 +33,7 @@ const DataTable = () => {
     setStart(prev=>prev+limit);
 
   }
-  const filterData= data.filter((item,i)=>start<i<limit)
+  const filterData= data.filter((item,i)=>i<limit)
   return (
     <div className="container mx-auto px-40">
       DataTable
