@@ -3,7 +3,7 @@ import TosterChild from "./TosterChild";
 
 const Toaster = () => {
   const [show, setShow] = useState(false);
-  const [message, setMessage] = useState(["sucess", "error", "info"]);
+  const [message, setMessage] = useState();
   const [type, setType] = useState("");
   const [duration, setDuration] = useState(3000);
   const [data, setData] = useState({
