@@ -6,7 +6,7 @@ const DataTable = () => {
   const[currentPage,setCurrentPage]= useState(1);
   const[totalPage,setTotalPage]= useState(3);
   const[limit,setLimit]= useState(5);
-  const[start,setStart]= useState()
+  const[start,setStart]= useState(0)
   const EKDMTOTAL= 15
 
   useEffect(() => {
@@ -24,15 +24,19 @@ const DataTable = () => {
   const handPrev=()=>{
     setLimit(prev=>prev-limit)
     setCurrentPage(prev=>prev-1)
+    setStart(prev=>prev-limit);
   }
   const handNext=()=>{
     setLimit(prev=>prev+limit);
-    setCurrentPage(prev=>prev+1)
+    setCurrentPage(prev=>prev+1);
+    setStart(prev=>prev+limit);
+
   }
-  const filterData= data.filter((item,i)=>i<limit)
+  const filterData= data.filter((item,i)=>start<i<limit)
   return (
     <div className="container mx-auto px-40">
       DataTable
+      start:{start}
      currentPage :{currentPage}
 totalPage{totalPage},
 limit:{limit},
