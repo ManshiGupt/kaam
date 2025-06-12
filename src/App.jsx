@@ -225,6 +225,7 @@ import Debouncing from "./component/Debouncing";
 // import FilterByid from "./component/FilterByid";
 import Otp from "./component/revision/Otp";
 import SearchBar100 from "./component/revision/SearchBar100";
+import DataTable from "./component/akshaySainiInterviewPre/DataTable";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -311,7 +312,8 @@ const App = () => {
         {/* <Debouncing/>
         <FilterByid/> */}
         {/* <Otp/> */}
-        <SearchBar100/>
+        {/* <SearchBar100/> */}
+        <DataTable/>
       </div>
     </FormContextProvider>
     // </Provider>
