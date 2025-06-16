@@ -227,6 +227,7 @@ import Otp from "./component/revision/Otp";
 import SearchBar100 from "./component/revision/SearchBar100";
 import DataTable from "./component/akshaySainiInterviewPre/DataTable";
 import Toaster from "./component/akshaySainiInterviewPre/Toaster";
+import Practice from "./component/namasteDsa/Practice";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -315,7 +316,8 @@ const App = () => {
         {/* <Otp/> */}
         {/* <SearchBar100/> */}
         {/* <DataTable/> */}
-        <Toaster/>
+        {/* <Toaster/> */}
+        <Practice/>
       </div>
     </FormContextProvider>
     // </Provider>
