@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const TosterChild = ({ message, type, duration }) => {
+const TosterChild = ({ message, type }) => {
+  const bgColor =
+    type === "sucess" ? "bg-green-600"
+    : type === "error" ? "bg-red-600"
+    : "bg-blue-600";
+
   return (
-    <div>
-        <div className='bg-red-700 p-4'>
-            {message}
-        </div>
+    <div className={`text-white p-4 mb-3 rounded shadow-lg ${bgColor}`}>
+      {message}
     </div>
-  )
-}
+  );
+};
 
-export default TosterChild
+export default TosterChild;

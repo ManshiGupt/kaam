@@ -2,61 +2,37 @@ import React, { useState } from "react";
 import TosterChild from "./TosterChild";
 
 const Toaster = () => {
-  const [show, setShow] = useState(false);
-  const [message, setMessage] = useState();
-  const [type, setType] = useState("");
-  const [duration, setDuration] = useState(3000);
-  const [data, setData] = useState({
-    sucess: ["datasaved sucessfully", "sucess", 3000],
-    error: ["error in saving", "error", 4000],
-    info: ["information loaded", "info", 2000],
-  });
+  const [toasts, setToasts] = useState([]);
 
-  const handlee = (data) => {
-    setMessage(data[0]);
-    setType(data[1]);
-    setDuration(data[2]);
-    setShow(true);
-    const intervall = setTimeout(() => {
-      setShow(false);
+  const data = {
+    sucess: { message: "Data saved successfully", type: "sucess", duration: 3000 },
+    error: { message: "Error in saving", type: "error", duration: 4000 },
+    info: { message: "Information loaded", type: "info", duration: 2000 },
+  };
+
+  const handlee = ({ message, type, duration }) => {
+    const id = Date.now();
+    const newToast = { id, message, type };
+    setToasts((prev) => [...prev, newToast]);
+
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((toast) => toast.id !== id));
     }, duration);
   };
 
   return (
-    <div>
-      {/* <TosterChild message={message} type={type} duration={duration} /> */}
-      <div className="flex justify-center gap-10">
-        <button
-          className="border-2 border-black p-4"
-          onClick={() => handlee(data.sucess)}
-        >
-          show sucees
-        </button>
-        <button
-          className="border-2 border-black p-4"
-          onClick={() => handlee(data.error)}
-        >
-          show error
-        </button>
-        <button
-          className="border-2 border-black p-4"
-          onClick={() => handlee(data.info)}
-        >
-          show info
-        </button>
+    <div className="p-10">
+      <div className="flex justify-center gap-10 mb-10">
+        <button className="border-2 border-black p-4" onClick={() => handlee(data.sucess)}>Show Success</button>
+        <button className="border-2 border-black p-4" onClick={() => handlee(data.error)}>Show Error</button>
+        <button className="border-2 border-black p-4" onClick={() => handlee(data.info)}>Show Info</button>
       </div>
-      {show && type == "sucess" && (
-        <TosterChild message={message} type={type} duration={duration} />
-      )}
-      <div className="mt-20">
-        {show && type == "error" && (
-          <TosterChild message={message} type={type} duration={duration} />
-        )}
-      </div>
-      <div className="mt-20">
-        {show && type == "info" && (
-          <TosterChild message={message} type={type} duration={duration} />
-        )}
+
+      {/* Toast container */}
+      <div className="fixed top-5 right-5 z-50">
+        {toasts.map((toast) => (
+          <TosterChild key={toast.id} message={toast.message} type={toast.type} />
+        ))}
       </div>
     </div>
   );
