@@ -228,6 +228,7 @@ import SearchBar100 from "./component/revision/SearchBar100";
 import DataTable from "./component/akshaySainiInterviewPre/DataTable";
 import Toaster from "./component/akshaySainiInterviewPre/Toaster";
 import Practice from "./component/namasteDsa/Practice";
+import CalenderDate from "./component/flipkart/CalenderDate";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -252,7 +253,7 @@ const App = () => {
             <SwiggyApi/>
         </div>
       </div> */}
-        <h1 className="p-40">hfgydrtytdwr</h1>
+        {/* <h1 className="p-40">hfgydrtytdwr</h1> */}
         {/* <FormTab/> */}
 
         {/* <InfiniteScroll/> */}
@@ -317,7 +318,8 @@ const App = () => {
         {/* <SearchBar100/> */}
         {/* <DataTable/> */}
         {/* <Toaster/> */}
-        <Practice/>
+        {/* <Practice/> */}
+          <CalenderDate/>
       </div>
     </FormContextProvider>
     // </Provider>
