@@ -43,6 +43,13 @@ const CalenderDate = () => {
     "1AM",
     "1AM",
   ];
+
+  const[object,setObject]=useState({
+    "1AM":[... Array(7).fill(" ")],
+     "2AM":[... Array(7).fill(" ")],
+      "3AM":[... Array(7).fill(" ")],
+       "4AM":[1,2,3,4,5,6,7],
+  })
   const handleEvent = (i, time) => {
     setShowModal(prev=>!prev);
     console.log("i",dates[i]+1)
@@ -59,10 +66,36 @@ const CalenderDate = () => {
   const filterDateNext = () => {
     setDates((prev) => prev.map((item, i) => (item + 7) % 30));
   };
+  const hna=(time,i)=>{
+    console.log("time",time)
+    console.log("i",i)
+    let newArray= [...time];
+    newArray[i]="manshi";
+    setObject(prev=>)
+  }
   return (
     <div>
-      {/* CalenderDate */}
-      <div className="relative border-2 border-black ">
+        <div className="flex">
+            <div>
+        {Object.keys(object).map((item,i)=>(
+            <div className="flex flex-row p-5">
+                {item}
+                </div>
+        ))}
+        </div>
+        <div className="">
+        {Object.values(object).map((time,i)=>(
+            <div className=" flex">
+                {time.map((item,i)=>(
+                    <div className="border-2 border-black p-5" onClick={()=>hna(time,i)}>
+                        {item}
+                    </div>
+                ))}
+                </div>
+        ))}
+        </div>
+     </div>
+      {/* <div className="relative border-2 border-black ">
         <div className="sticky top-0 z-50 bg-black text-white p-4">
           <div className=" flex justify-between">
             <div className=" text-5xl">MAY 2018</div>
@@ -103,25 +136,17 @@ const CalenderDate = () => {
                     className=" border-2 border-black px-24 cursor-pointer"
                     onClick={() => handleEvent(i, time)}
                   >
-                    {/* {i}{" "} */}
+                    
                     {item}
                   </div>
                 ))}
               </div>
             ))}
           </div>
-          {/* <div className="grid grid-cols-7 border-2 border-black"> */}
-          {/* {event.map((item,i)=>(
-                <div className=" border-2 border-black p-20">
-                  
-                    </div>
-               ))} */}
-
-          {/* </div> */}
          
           {showModal && <Modal setShowModal={setShowModal}/>}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
