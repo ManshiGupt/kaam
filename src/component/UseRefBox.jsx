@@ -13,6 +13,8 @@ const UseRefBox = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (boxRef.current && !boxRef.current.contains(event.target)) {
+        console.log("boxRef.current",boxRef.current)
+        console.log("boxRef.boxRef.current.contains(event.target)",boxRef.current.event)
         setIsVisible(false);
       }
     };

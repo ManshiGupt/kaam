@@ -71,7 +71,7 @@ const CalenderDate = () => {
     console.log("i",i)
     let newArray= [...time];
     newArray[i]="manshi";
-    setObject(prev=>)
+    // setObject(prev=>)
   }
   return (
     <div>

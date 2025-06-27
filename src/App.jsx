@@ -272,7 +272,7 @@ const App = () => {
         {/* <ContactForm/> */}
         {/* <PatientRecord/>
       <Filter/> */}
-        {/* <UseRefBox/> */}
+        <UseRefBox/>
         {/* <ButtonDelete/> */}
         {/* <Body/> */}
         {/* <Otp/> */}
@@ -319,7 +319,7 @@ const App = () => {
         {/* <DataTable/> */}
         {/* <Toaster/> */}
         {/* <Practice/> */}
-          <CalenderDate/>
+          {/* <CalenderDate/> */}
       </div>
     </FormContextProvider>
     // </Provider>
