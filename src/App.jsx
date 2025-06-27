@@ -229,6 +229,9 @@ import DataTable from "./component/akshaySainiInterviewPre/DataTable";
 import Toaster from "./component/akshaySainiInterviewPre/Toaster";
 import Practice from "./component/namasteDsa/Practice";
 import CalenderDate from "./component/flipkart/CalenderDate";
+import DataTable1 from "./component/revision/DataTable1";
+import UseRefBox1 from "./component/revision/UseRefBox1";
+import DeboucingSearch from "./component/revision/DeboucingSearch";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -272,7 +275,7 @@ const App = () => {
         {/* <ContactForm/> */}
         {/* <PatientRecord/>
       <Filter/> */}
-        <UseRefBox/>
+        {/* <UseRefBox/> */}
         {/* <ButtonDelete/> */}
         {/* <Body/> */}
         {/* <Otp/> */}
@@ -320,6 +323,9 @@ const App = () => {
         {/* <Toaster/> */}
         {/* <Practice/> */}
           {/* <CalenderDate/> */}
+          {/* <DataTable1/> */}
+          {/* <UseRefBox1/> */}
+          <DeboucingSearch/>
       </div>
     </FormContextProvider>
     // </Provider>
