@@ -22,16 +22,7 @@ const Corousal = () => {
   return (
     <div>
 {currentPage}
-        {/* <ul className='flex gap-2 relative justify-center'>
-        {imagsg.map((data,i)=>(
-            <div className='h-36 w-36' key={i}>
-
-                <img src={data} className='max-h-36'/>
-            </div>
-        ))}
-        <button className='absolute right-5 top-10'>next</button>
-        <button className='absolute left-5 top-10'>prev</button>
-        </ul> */}
+      
         
             <div className='absolute h-64 w-64 flex justify-center'>
                 <img src={imagsg[currentPage]} />
