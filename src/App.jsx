@@ -232,6 +232,11 @@ import CalenderDate from "./component/flipkart/CalenderDate";
 import DataTable1 from "./component/revision/DataTable1";
 import UseRefBox1 from "./component/revision/UseRefBox1";
 import DeboucingSearch from "./component/revision/DeboucingSearch";
+import UseRef from "./component/UseRef";
+import SkicyNotes from "./component/akshaySainiInterviewPre/SkicyNotes";
+import Rating from "./component/Rating";
+import DragDrop from "./component/akshaySainiInterviewPre/DragDrop";
+import Namee from "./component/Namee";
 
 // import { Provider } from 'react-redux'
 // import { store } from './store/globalStore';
@@ -285,7 +290,7 @@ const App = () => {
         {/* <Otp/>
       <OtpBar/> */}
         {/* <Otp1/> */}
-        {/* <Search2/> */}
+        <Search2/>
         {/* <TabDataPersi/> */}
         {/* <FlipkartSearchBold/> */}
         {/* <Accordian1/> */}
@@ -325,7 +330,12 @@ const App = () => {
           {/* <CalenderDate/> */}
           {/* <DataTable1/> */}
           {/* <UseRefBox1/> */}
+          {/* <Rating/>
+          <UseRef/>
           <DeboucingSearch/>
+          <SkicyNotes/> */}
+          {/* <DragDrop/> */}
+          <Namee/>
       </div>
     </FormContextProvider>
     // </Provider>
